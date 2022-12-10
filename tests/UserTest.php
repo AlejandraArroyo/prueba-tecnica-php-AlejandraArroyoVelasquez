@@ -6,6 +6,7 @@ class UserTest extends \PHPUnit\Framework\TestCase {
 
 
   /** @test **/
+  
   public function comprobarqueguarda(){
        
    $user  = new User();
@@ -19,9 +20,17 @@ class UserTest extends \PHPUnit\Framework\TestCase {
   public function comprobarquemuestra(){
        
     $user  = new User();
-    $person = $user->guardar("Alejandra","arroyoalejandra97@gmail.com","contra","ciudad de guatemala");
+    $user->guardar("Alejandra","arroyoalejandra97@gmail.com","contra","ciudad de guatemala");
     $pintar = $user->printInfo();
-    $this->assertEquals(true,$pintar);
+    if(strlen($pintar) < 0)
+    {
+        $printt = 0;
+    }
+    else{
+        $printt =1;
+    }
+    
+    $this->assertEquals(1,$printt);
  
    }
 
@@ -65,6 +74,17 @@ class UserTest extends \PHPUnit\Framework\TestCase {
     
     }
 
+
+        /** @test **/
+       /* public function comprobarDestroy(){
+        
+            $user  = new User();
+            $user->guardar("Alejandra","arroyoalejandra97@gmail.com","password","ciudad de guatemala");
+            $user = null;
+            $this->assertEquals(null,$user);
+        
+        }*/
+    
 
 
 

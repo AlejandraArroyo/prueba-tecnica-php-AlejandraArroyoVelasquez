@@ -19,13 +19,13 @@ class User {
 
     public function printInfo()
     {
-          echo "nombre: " . $this->nombre."  Email: " . $this->email."  Direccion: " . $this->direccion;   
-          return true;  
+          echo "nombre: " . $this->nombre."  Email: " . $this->email."  Direccion: " . $this->direccion."\n";   
+          
     }
 
     public function getNombre()
     {
-       return   $this->nombre;
+       return   $this->nombre."\n";
     }
 
     
@@ -37,7 +37,7 @@ class User {
 
     public function getEmail()
     {
-        return $this->email;
+        return $this->email."\n";
     }
 
     public function setEmail($email)
@@ -49,7 +49,7 @@ class User {
     
     public function getDireccion()
     {
-        return $this->direccion;
+        return $this->direccion."\n";
     }
 
     public function setDireccion($direccion)
@@ -57,6 +57,10 @@ class User {
         $this->direccion = $direccion;
         return true;
     }
+    //public function __destruct() {
+      //  echo 'Objeto destruido';  
+        //return true;  
+     //}
 
 }
 
