@@ -47,7 +47,7 @@ class User {
         return true;
     }
     
-    
+
     public function getDireccion()
     {
         return $this->direccion."\n";
@@ -58,10 +58,10 @@ class User {
         $this->direccion = $direccion;
         return true;
     }
-    //public function __destruct() {
+    /*public function __destruct() {
       //  echo 'Objeto destruido';  
         //return true;  
-     //}
+     }*/
 
 }
 
