@@ -47,6 +47,7 @@ class User {
         return true;
     }
     
+    
     public function getDireccion()
     {
         return $this->direccion."\n";
