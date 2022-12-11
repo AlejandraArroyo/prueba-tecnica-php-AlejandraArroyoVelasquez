@@ -4,7 +4,7 @@ require ("User.php");
 
 use App\User;
 
-class UserRepository {
+class UserRepository extends User{
 
 function guardarUsuario($nombre,$email,$password,$direccion)
 {
