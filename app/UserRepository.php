@@ -15,7 +15,7 @@ $user =  $persona->printInfo();
 foreach ($usuarios as $dato) {
     if($dato == null)
     $dato = $user;
-    return true;
+    break;
   }
 }
 
