@@ -4,7 +4,7 @@
 class UserTest extends \PHPUnit\Framework\TestCase {
 
 
-    
+
 
   /** @test **/
   
@@ -108,6 +108,16 @@ class UserTest extends \PHPUnit\Framework\TestCase {
         $this->assertEquals(true,$direccion);
     
     }
+
+    /** @test **/
+    public function comprobarqueGuardaPassword(){
+       
+        $user  = new User();
+        $user->guardar("Alejandra","arroyoalejandra97@gmail.com","contra","ciudad de guatemala");
+        $password = $user->setPassword("NuevoPassword");
+        $this->assertEquals(true,$password);
+     
+        }
 
 
 }

@@ -62,6 +62,12 @@ class User {
       //  echo 'Objeto destruido';  
         //return true;  
      }*/
+     
+    public function setPassword($password)
+    {
+        $this->password = $password;
+        return true;
+    }
 
 }
 
