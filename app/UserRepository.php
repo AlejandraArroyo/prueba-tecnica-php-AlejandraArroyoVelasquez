@@ -4,11 +4,29 @@ require ("User.php");
 
 use App\User;
 
-$persona = new User();
-$persona->guardar("Alejandra","arroyoalejandra97@gmail.com","contra","ciudad de guatemala");
-$persona->setNombre("alew");
-echo $persona->printInfo();
+class UserRepository {
 
+function guardarUsuario($nombre,$email,$password,$direccion)
+{
+    
+$persona = new User();
+$persona->guardar($nombre,$email,$password,$direccion);
+return true;
+}
+
+function editarUsuario($nombre,$email,$password,$direccion)
+{
+
+}
+
+function MostrarUsuario()
+{
+    $persona = new User();
+    echo $persona->printInfo();
+}
+
+
+}
 
 
 ?>
